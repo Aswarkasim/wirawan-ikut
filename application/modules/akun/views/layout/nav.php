@@ -1,0 +1,3 @@
+ <a class="nav-item nav-link <?= $this->uri->segment('2') == 'dashboard' ? 'active' : ''; ?>" id="nav-home-tab" href="<?= base_url('akun/dashboard'); ?>">Dashboard</a>
+ <a class="nav-item nav-link <?= $this->uri->segment('2') == 'tagihan' ? 'active' : ''; ?>" id="nav-profile-tab" href="<?= base_url('akun/tagihan'); ?>">Tagihan</a>
+ <a class="nav-item nav-link <?= $this->uri->segment('2') == 'password' ? 'active' : ''; ?>" id="nav-contact-tab" href="<?= base_url('akun/password'); ?>">Password</a>
