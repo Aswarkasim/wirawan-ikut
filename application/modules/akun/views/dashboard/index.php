@@ -18,7 +18,7 @@
               <div class="mb-3">
                 <p class="text-mute"><?= $row->type; ?></p>
                 <h5><?= $row->nama_paket; ?></h5>
-                <small>Aktif sampai <b>8 Februari 2020</b></small>
+                <small>Aktif sampai <br> <b><?= format_indo($row->aktif_sampai) ?></b></small>
                 <hr>
               </div>
 
@@ -59,7 +59,7 @@
                 <div class="mb-3">
                   <p class="text-mute"><?= $row->type; ?></p>
                   <h5><?= $row->nama_paket; ?></h5>
-                  <small>Aktif sampai <b>8 Februari 2020</b></small>
+                  <!-- <small>Aktif sampai <b>8 Februari 2020</b></small> -->
                   <hr>
                 </div>
 

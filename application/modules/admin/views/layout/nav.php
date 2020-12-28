@@ -98,7 +98,7 @@ $role = $this->session->userdata('role');
                                 } ?>"><a href="<?= base_url('admin/konfigurasi/index') ?>">General</a></li>
                     <li class="<?php if ($this->uri->segment(3) == "banner") {
                                     echo "active";
-                                } ?>"><a href="<?= base_url('admin/konfigurasi/banner') ?>">Banner</a></li>
+                                } ?>"><a href="<?= base_url('admin/banner') ?>">Banner</a></li>
                     <li class="<?php if ($this->uri->segment(3) == "logo") {
                                     echo "active";
                                 } ?>"><a href="<?= base_url('admin/konfigurasi/logo') ?>">Logo</a></li>

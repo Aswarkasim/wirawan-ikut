@@ -20,12 +20,14 @@ class Home extends CI_Controller
         $paket  = $this->HM->listPaket(3);
         $testimony  = $this->Crud_model->listing('tbl_testimony');
         $team  = $this->Crud_model->listing('tbl_team');
+        $banner  = $this->HM->listBanner('tbl_banner');
         $konfigurasi = $this->Crud_model->listingOne('tbl_konfigurasi', 'id_konfigurasi', '1');
 
         $data = [
             'paket'     => $paket,
             'konfigurasi'     => $konfigurasi,
             'team'     => $team,
+            'banner'     => $banner,
             'testimony'     => $testimony,
             'content'  => 'home/home/index'
         ];

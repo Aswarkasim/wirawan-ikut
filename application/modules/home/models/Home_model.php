@@ -4,6 +4,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Home_model extends CI_Model
 {
+
+  public function listBanner($limit)
+  {
+    $this->db->select('*')
+      ->from('tbl_banner')
+      ->order_by('urutan', 'ASC');
+    return $this->db->get()->result();
+  }
+
   public function listPaket($limit)
   {
     $this->db->select('*')

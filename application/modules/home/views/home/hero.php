@@ -7,7 +7,6 @@
 
 
 
-
 <!-- Hero Section -->
 <div class="position-relative">
   <!-- Main Slider -->
@@ -30,66 +29,24 @@
        ]
      }'>
 
-    <div class="js-slide d-flex gradient-x-overlay-sm-navy bg-img-hero min-h-620rem" style="background-image: url(<?= base_url('assets/front/'); ?>img/1920x1080/img3.jpg);">
-      <!-- News Block -->
-      <div class="container d-flex align-items-center min-h-620rem">
-        <div class="w-lg-40 mr-5">
-          <div class="mb-5">
-            <h3 class="h1 font-weight-bold text-white" data-hs-slick-carousel-animation="fadeInUp" data-hs-slick-carousel-animation-delay="150">Front Interview with a Lead Designer of the Hubble</h3>
-          </div>
-          <a class="btn btn-primary btn-wide transition-3d-hover" href="#" data-hs-slick-carousel-animation="fadeInUp" data-hs-slick-carousel-animation-delay="300">Read Article <i class="fas fa-angle-right fa-sm ml-1"></i></a>
-        </div>
-      </div>
-      <!-- End News Block -->
-    </div>
 
-    <div class="js-slide d-flex gradient-x-overlay-sm-navy bg-img-hero min-h-620rem" style="background-image: url(<?= base_url('assets/front/'); ?>img/1920x1080/img5.jpg);">
-      <!-- News Block -->
-      <div class="container d-flex align-items-center min-h-620rem">
-        <div class="w-lg-40 mr-5">
-          <!-- Author -->
-          <div class="media align-items-center mb-3" data-hs-slick-carousel-animation="fadeInUp">
-            <div class="avatar avatar-sm avatar-circle mr-3">
-              <img class="avatar-img" src="<?= base_url('assets/front/'); ?>img/100x100/img10.jpg" alt="Image Description">
+
+    <?php foreach ($banner as $row) { ?>
+      <div class="js-slide d-flex bg-img-hero min-h-620rem" style="background-image: url(<?= base_url($row->gambar); ?>">
+        <!-- News Block -->
+        <div class="container d-flex align-items-center min-h-620rem">
+          <div class="w-lg-40 mr-5">
+            <div class="mb-5">
+              <h3 class="h1 font-weight-bold <?= $row->warna_text; ?>" data-hs-slick-carousel-animation="fadeInUp" data-hs-slick-carousel-animation-delay="150"><strong><?= $row->topik; ?></strong></h3>
             </div>
-            <div class="media-body">
-              <a class="text-white" href="#">Christina Kray</a>
-            </div>
+            <p class="transition-3d-hover <?= $row->warna_text; ?>" data-hs-slick-carousel-animation="fadeInUp" data-hs-slick-carousel-animation-delay="300"><strong> <?= $row->deskripsi; ?></strong></p>
+            <a class="btn btn-wide transition-3d-hover text-white" style="background-color: #fd5c0a;" href="<?= base_url('akun/dashboard'); ?>" data-hs-slick-carousel-animation="fadeInUp" data-hs-slick-carousel-animation-delay="300">Mulai <i class="fas fa-angle-right fa-sm ml-1"></i></a>
           </div>
-          <!-- End Author -->
-
-          <div class="mb-5">
-            <h2 class="h1 font-weight-bold text-white" data-hs-slick-carousel-animation="fadeInUp" data-hs-slick-carousel-animation-delay="150">Front Corporate - let's work together</h2>
-          </div>
-          <a class="btn btn-primary btn-wide transition-3d-hover" href="#" data-hs-slick-carousel-animation="fadeInUp" data-hs-slick-carousel-animation-delay="300">Read Article <i class="fas fa-angle-right fa-sm ml-1"></i></a>
         </div>
+        <!-- End News Block -->
       </div>
-      <!-- End News Block -->
-    </div>
+    <?php } ?>
 
-    <div class="js-slide d-flex gradient-x-overlay-sm-navy bg-img-hero min-h-620rem" style="background-image: url(<?= base_url('assets/front/'); ?>img/1920x1080/img4.jpg);">
-      <!-- News Block -->
-      <div class="container d-flex align-items-center min-h-620rem">
-        <div class="w-lg-40 mr-5">
-          <div class="mb-7">
-            <!-- Author -->
-            <div class="media align-items-center mb-3" data-hs-slick-carousel-animation="fadeInUp">
-              <div class="avatar avatar-sm avatar-circle mr-3">
-                <img class="avatar-img" src="<?= base_url('assets/front/'); ?>img/100x100/img4.jpg" alt="Image Description">
-              </div>
-              <div class="media-body">
-                <a class="text-white" href="#">Jeff Fisher</a>
-              </div>
-            </div>
-            <!-- End Author -->
-
-            <h1 class="font-weight-bold text-white" data-hs-slick-carousel-animation="fadeInUp" data-hs-slick-carousel-animation-delay="150">How Google Assistant now helps you record stories</h1>
-          </div>
-          <a class="btn btn-primary btn-wide transition-3d-hover" href="#" data-hs-slick-carousel-animation="fadeInUp" data-hs-slick-carousel-animation-delay="300">Read Article <i class="fas fa-angle-right fa-sm ml-1"></i></a>
-        </div>
-      </div>
-      <!-- End News Block -->
-    </div>
   </div>
   <!-- End Main Slider -->
 
