@@ -20,7 +20,7 @@
             <?= $paket->petunjuk ?>
           </p>
           <a href="<?= base_url('home/paket/start/' . $paket->id_paket); ?>" class="btn btn-primary text-white"> Mulai ! <i class="fa fa-angle-right"></i></a><br>
-          <a href="<?= base_url('home/paket/rangking/' . $paket->id_paket); ?>" class="btn btn-primary text-white"> Rangking <i class="fa fa-chart"></i></a>
+          <a href="<?= base_url('home/paket/rangking/' . $paket->id_paket); ?>" class="btn btn-secondary text-white"><i class="fa fa-chart-line"> </i> Rangking</a>
         </div>
 
       </article>

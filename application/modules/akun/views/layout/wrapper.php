@@ -17,7 +17,7 @@ $this->load->view('home/layout/header');
 
         <div class="col-auto">
           <div class="d-none d-lg-block">
-            <a class="btn btn-sm btn-soft-light" href="<?= base_url('home/auth/logout'); ?>">Log out</a>
+            <a class="btn btn-sm btn-soft-light tombol-logout" href="<?= base_url('home/auth/logout'); ?>">Log out</a>
           </div>
 
           <!-- Responsive Toggle Button -->

@@ -23,7 +23,7 @@ class Soal extends CI_Controller
     $id_user = $this->session->userdata('id_user');
     // $status = $this->uri->segment('4');
     $butir = $this->uri->segment('4');
-    $task = $this->HM->butirSoal($id_user, $id_paket, $butir);
+    $task = $this->SM->butirSoal($id_user, $id_paket, $butir);
     $paket = $this->Crud_model->listingOne('tbl_paket', 'id_paket', $id_paket);
 
 
@@ -37,7 +37,7 @@ class Soal extends CI_Controller
         'task'    => $task,
         'member'    => $member,
         'paket'    => $paket,
-        'listSoal' => $this->HM->listSoal($task->id_member),
+        'listSoal' => $this->SM->listSoal($task->id_member),
         'content'  => 'home/soal/index'
       ];
       $this->load->view('home/layout/wrapper', $data, FALSE);

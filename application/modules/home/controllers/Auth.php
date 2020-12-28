@@ -66,33 +66,40 @@ class Auth extends CI_Controller
 
   public function register()
   {
-    $this->load->helper('string');
 
-    $required = '%s tidak boleh kosong';
-    $is_email = '%s ' . post('email') . ' telah ada, silakan masukkan email yang lain';
-    $valid = $this->form_validation;
-    $valid->set_rules('email', 'Email', 'required|is_unique[tbl_user.email]|valid_email', array('required' => $required, 'is_unique' => $is_email, 'valid_email' => '%s yang anda  masukkan tidak valid'));
-    $valid->set_rules('password', 'Password', 'required', array('required' => $required, 'is_unique' => $is_email));
-    $valid->set_rules('re_password', 'Konfirmasi Password', 'required|matches[password]', array('required' => $required, 'matches' => '%s password yang anda masukkan tidak sama'));
+    if (empty($this->session->userdata('id_user'))) {
+      $this->load->model('home/Auth_model', 'AM');
+
+      $this->load->helper('string');
+
+      $required = '%s tidak boleh kosong';
+      $is_email = '%s ' . post('email') . ' telah ada, silakan masukkan email yang lain';
+      $valid = $this->form_validation;
+      $valid->set_rules('email', 'Email', 'required|is_unique[tbl_user.email]|valid_email', array('required' => $required, 'is_unique' => $is_email, 'valid_email' => '%s yang anda  masukkan tidak valid'));
+      $valid->set_rules('password', 'Password', 'required', array('required' => $required, 'is_unique' => $is_email));
+      $valid->set_rules('re_password', 'Konfirmasi Password', 'required|matches[password]', array('required' => $required, 'matches' => '%s password yang anda masukkan tidak sama'));
 
 
-    if ($valid->run() === FALSE) {
-      $data = [
-        'content'   => 'home/auth/register'
-      ];
-      $this->load->view('home/layout/wrapper', $data, FALSE);
+      if ($valid->run() === FALSE) {
+        $data = [
+          'content'   => 'home/auth/register'
+        ];
+        $this->load->view('home/layout/wrapper', $data, FALSE);
+      } else {
+        $i = $this->input;
+        $data = [
+          'id_user'        => random_string(),
+          'email'           => $i->post('email'),
+          'is_active'       => 1,
+          'password'       => sha1($i->post('password')),
+
+        ];
+        $this->Crud_model->add('tbl_user', $data);
+        $this->session->set_flashdata('msg', 'akun anda telah dibuat, Silakan login');
+        redirect('home/auth', 'refersh');
+      }
     } else {
-      $i = $this->input;
-      $data = [
-        'id_user'        => random_string(),
-        'email'           => $i->post('email'),
-        'is_active'       => 1,
-        'password'       => sha1($i->post('password')),
-
-      ];
-      $this->Crud_model->add('tbl_user', $data);
-      $this->session->set_flashdata('msg', 'akun anda telah dibuat, Silakan login');
-      redirect('home/auth', 'refersh');
+      redirect('akun/dashboard', 'refresh');
     }
   }
 

@@ -51,7 +51,7 @@
                 <small><a href="" class="float-right mr-3" target="_blank"><i class="fab fa-instagram"></i> aswar_kasim</a></small>
               </p>
               <div class="card-footer border-0 pt-0">
-                <a class="font-weight-bold" href="../pages/customer-story.html">Read story <i class="fas fa-angle-right fa-sm ml-1"></i></a>
+                <a class="font-weight-bold" href="../pages/customer-story.html">Selengkapnya <i class="fas fa-angle-right fa-sm ml-1"></i></a>
               </div>
             </div>
             <!-- End Card Info -->

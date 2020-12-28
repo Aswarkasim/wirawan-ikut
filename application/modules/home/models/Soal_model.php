@@ -77,6 +77,29 @@ class Soal_model extends CI_Model
     $x = $x + 250;
     return $x;
   }
+
+  function butirSoal($id_user, $id_paket, $butir)
+  {
+    $this->db->select('tbl_task.*, 
+                      tbl_soal.butir_soal,
+                      tbl_soal.pembahasan')
+      ->from('tbl_task')
+      ->join('tbl_soal', 'tbl_soal.id_soal = tbl_task.id_soal', 'left')
+      ->where('tbl_task.id_user', $id_user)
+      ->where('tbl_task.id_paket', $id_paket)
+      ->where('tbl_task.no_soal', $butir);
+    return $this->db->get()->row();
+  }
+
+
+  function listSoal($id_member)
+  {
+    $this->db->select('*')
+      ->from('tbl_task')
+      ->where('id_member', $id_member)
+      ->order_by('no_soal', 'ASC');
+    return $this->db->get()->result();
+  }
 }
 
 /* End of file ModelName.php */
