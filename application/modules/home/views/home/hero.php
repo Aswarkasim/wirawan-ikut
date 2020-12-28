@@ -34,17 +34,6 @@
       <!-- News Block -->
       <div class="container d-flex align-items-center min-h-620rem">
         <div class="w-lg-40 mr-5">
-          <!-- Author -->
-          <div class="media align-items-center mb-3" data-hs-slick-carousel-animation="fadeInUp">
-            <div class="avatar avatar-sm avatar-circle mr-3">
-              <img class="avatar-img" src="<?= base_url('assets/front/'); ?>img/100x100/img10.jpg" alt="Image Description">
-            </div>
-            <div class="media-body">
-              <a class="text-white" href="#">Christina Kray</a>
-            </div>
-          </div>
-          <!-- End Author -->
-
           <div class="mb-5">
             <h3 class="h1 font-weight-bold text-white" data-hs-slick-carousel-animation="fadeInUp" data-hs-slick-carousel-animation-delay="150">Front Interview with a Lead Designer of the Hubble</h3>
           </div>

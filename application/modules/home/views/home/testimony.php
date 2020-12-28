@@ -5,7 +5,7 @@
       <!-- Title -->
       <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
         <span class="d-block small text-white-70 font-weight-bold text-cap mb-2">Success stories</span>
-        <h2 class="text-white">See how Front is helping teams get organized and work smarter</h2>
+        <h2 class="text-white">Mereka pernah menjadi bagian dari kami</h2>
       </div>
       <!-- End Title -->
 
@@ -34,90 +34,31 @@
                    }
                  }]
                }'>
-        <div class="js-slide mb-4">
-          <!-- Card Info -->
-          <div class="card h-100">
-            <img class="card-img-top" src="<?= base_url('assets/front/'); ?>img/480x320/img7.jpg" alt="Image Description">
-            <div class="card-body">
-              <div class="max-w-13rem w-100 mb-3">
-                <img class="img-fluid" src="<?= base_url('assets/front/'); ?>svg/clients-logo/airbnb-original.svg" alt="Logo">
-              </div>
-              <p class="mb-0">Front Projects has proved to be most efficient cloud based project tracking and bug tracking tool.</p>
-            </div>
-            <div class="card-footer border-0 pt-0">
-              <a class="font-weight-bold" href="../pages/customer-story.html">Read story <i class="fas fa-angle-right fa-sm ml-1"></i></a>
-            </div>
-          </div>
-          <!-- End Card Info -->
-        </div>
 
-        <div class="js-slide mb-4">
-          <!-- Card Info -->
-          <div class="card h-100">
-            <img class="card-img-top" src="<?= base_url('assets/front/'); ?>img/480x320/img6.jpg" alt="Image Description">
-            <div class="card-body">
-              <div class="max-w-13rem w-100 mb-3">
-                <img class="img-fluid" src="<?= base_url('assets/front/'); ?>svg/clients-logo/slack-original.svg" alt="Logo">
+        <?php foreach ($testimony as $row) { ?>
+          <div class="js-slide mb-4">
+            <!-- Card Info -->
+            <div class="card h-100">
+              <div class="image-testy" style="height: 250px; width: 100%; overflow: hidden;">
+                <img class="card-img-top" src="<?= base_url($row->gambar); ?>" alt="Image Description">
               </div>
-              <p class="mb-0">Front Projects has proved to be most efficient cloud based project tracking and bug tracking tool.</p>
+              <div class="card-body">
+                <h4 class="font-wight-bold mb-0"><strong><?= $row->nama_testimony; ?></strong></h4>
+                <small><?= $row->pekerjaan; ?></small>
+                <p class="mb-0 mt-2"><?= character_limiter($row->deskripsi, '100') ?></p>
+              </div>
+              <p>
+                <small><a href="" class="float-right mr-3" target="_blank"><i class="fab fa-instagram"></i> aswar_kasim</a></small>
+              </p>
+              <div class="card-footer border-0 pt-0">
+                <a class="font-weight-bold" href="../pages/customer-story.html">Read story <i class="fas fa-angle-right fa-sm ml-1"></i></a>
+              </div>
             </div>
-            <div class="card-footer border-0 pt-0">
-              <a class="font-weight-bold" href="../pages/customer-story.html">Read story <i class="fas fa-angle-right fa-sm ml-1"></i></a>
-            </div>
+            <!-- End Card Info -->
           </div>
-          <!-- End Card Info -->
-        </div>
 
-        <div class="js-slide mb-4">
-          <!-- Card Info -->
-          <div class="card h-100">
-            <img class="card-img-top" src="<?= base_url('assets/front/'); ?>img/480x320/img14.jpg" alt="Image Description">
-            <div class="card-body">
-              <div class="max-w-13rem w-100 mb-3">
-                <img class="img-fluid" src="<?= base_url('assets/front/'); ?>svg/clients-logo/paypal-original.svg" alt="Logo">
-              </div>
-              <p class="mb-0">Front Projects has proved to be most efficient cloud based project tracking and bug tracking tool.</p>
-            </div>
-            <div class="card-footer border-0 pt-0">
-              <a class="font-weight-bold" href="../pages/customer-story.html">Read story <i class="fas fa-angle-right fa-sm ml-1"></i></a>
-            </div>
-          </div>
-          <!-- End Card Info -->
-        </div>
+        <?php } ?>
 
-        <div class="js-slide mb-4">
-          <!-- Card Info -->
-          <div class="card h-100">
-            <img class="card-img-top" src="<?= base_url('assets/front/'); ?>img/480x320/img12.jpg" alt="Image Description">
-            <div class="card-body">
-              <div class="max-w-13rem w-100 mb-3">
-                <img class="img-fluid" src="<?= base_url('assets/front/'); ?>svg/clients-logo/fitbit-original.svg" alt="Logo">
-              </div>
-              <p class="mb-0">Google is an innovator in public safety technology. First-to-market with TASER conducted energy weapons (CEWs).</p>
-            </div>
-            <div class="card-footer border-0 pt-0">
-              <a class="font-weight-bold" href="../pages/customer-story.html">Read story <i class="fas fa-angle-right fa-sm ml-1"></i></a>
-            </div>
-          </div>
-          <!-- End Card Info -->
-        </div>
-
-        <div class="js-slide mb-4">
-          <!-- Card Info -->
-          <div class="card h-100">
-            <img class="card-img-top" src="<?= base_url('assets/front/'); ?>img/480x320/img27.jpg" alt="Image Description">
-            <div class="card-body">
-              <div class="max-w-13rem w-100 mb-3">
-                <img class="img-fluid" src="<?= base_url('assets/front/'); ?>svg/clients-logo/hubspot-original.svg" alt="Logo">
-              </div>
-              <p class="mb-0">Visitors can build a form or survey before signing up, but in order to save and share it.</p>
-            </div>
-            <div class="card-footer border-0 pt-0">
-              <a class="font-weight-bold" href="../pages/customer-story.html">Read story <i class="fas fa-angle-right fa-sm ml-1"></i></a>
-            </div>
-          </div>
-          <!-- End Card Info -->
-        </div>
       </div>
       <!-- End Slick Carousel -->
     </div>
