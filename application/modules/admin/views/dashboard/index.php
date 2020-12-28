@@ -1,25 +1,10 @@
 <!-- Begin Page Content -->
 <div class="row">
-    <div class="col-lg-12">
-        <i class="fa fa-home fa-3x">Beranda</i><br>
-    </div>
-</div>
-<div class="row">
-    <div class="col-lg-12">
-        <div class="alert alert-success">
-            <p>
-                <i class="fa fa-user"></i>
-                Selamat datang <?= $user->nama_user ?> diaplikasi persediaan barang
-            </p>
-        </div>
-    </div>
-</div>
-<div class="row">
     <div class="col-lg-3 col-xs-6">
         <!-- small box -->
         <div class="small-box bg-aqua">
             <div class="inner">
-                <h3><?= count($barang) ?></h3>
+                <h3>12</h3>
 
                 <p>Data Barang</p>
             </div>
@@ -34,7 +19,7 @@
         <!-- small box -->
         <div class="small-box bg-green">
             <div class="inner">
-                <h3><?= count($masuk) ?></h3>
+                <h3>34</h3>
 
                 <p>Barang Masuk</p>
             </div>
@@ -49,7 +34,7 @@
         <!-- small box -->
         <div class="small-box bg-yellow">
             <div class="inner">
-                <h3><?= count($keluar) ?></h3>
+                <h3>555</h3>
 
                 <p>Barang Keluar</p>
             </div>
@@ -64,7 +49,7 @@
         <!-- small box -->
         <div class="small-box bg-red">
             <div class="inner">
-                <h3><?= count($santri) ?></h3>
+                <h3>23</h3>
 
                 <p>Santri</p>
             </div>
@@ -76,30 +61,6 @@
     </div>
     <!-- ./col -->
 
-
-    <!-- Begin Page Content -->
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="box">
-                            <div class="box-body">
-                                <?php include('list.php') ?>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="box">
-                            <div class="box-body">
-                                <?php include('min_tabsis.php') ?>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 </div>

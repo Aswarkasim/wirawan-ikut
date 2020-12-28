@@ -32,7 +32,9 @@ class Home extends CI_Controller
         $this->load->view('home/layout/wrapper', $data, FALSE);
     }
 
-    function type($type)
+    function bannerPage()
     {
+
+        $this->load->view('home/home/testpage', FALSE);
     }
 }

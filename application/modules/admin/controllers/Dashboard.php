@@ -14,13 +14,13 @@ class Dashboard extends CI_Controller
 
     public function index()
     {
-        $id_user = $this->session->userdata('id_user');
-        $user = $this->Crud_model->listingOne('tbl_user', 'id_user', $id_user);
+        $id_admin = $this->session->userdata('id_admin');
+        $admin = $this->Crud_model->listingOne('tbl_admin', 'id_admin', $id_admin);
 
         $data = [
             'title'     => 'Dashboard',
-            'user'      => $user,
-            'content'   => 'admin/dashboard/indexs'
+            'admin'      => $admin,
+            'content'   => 'admin/dashboard/index'
         ];
 
         $this->load->view('admin/layout/wrapper', $data, FALSE);

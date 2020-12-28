@@ -105,6 +105,12 @@ $role = $this->session->userdata('role');
                 </ul>
             </li>
 
+            <li class="<?php if ($this->uri->segment(2) == "cart") {
+                            echo "active";
+                        }
+                        ?>"><a href="<?php echo base_url('admin/cart')
+                                        ?>"><i class="fa fa-folder"></i> <span>Test Cart</span></a></li>
+
 
 
         </ul>

@@ -66,7 +66,7 @@
 
    <!-- JS Global Compulsory -->
 
-   <!-- <script src="<?= base_url('assets/front/vendor/'); ?>jquery-migrate/dist/jquery-migrate.min.js"></script> -->
+   <script src="<?= base_url('assets/front/vendor/'); ?>jquery-migrate/dist/jquery-migrate.min.js"></script>
    <script src="<?= base_url('assets/front/vendor/'); ?>bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
    <!-- JS Implementing Plugins -->

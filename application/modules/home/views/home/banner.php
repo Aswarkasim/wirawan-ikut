@@ -1,11 +1,6 @@
-<!-- CSS Implementing Plugins -->
-<link rel="stylesheet" href="<?= base_url('assets/front/'); ?>vendor/font-awesome/css/all.min.css">
 <link rel="stylesheet" href="<?= base_url('assets/front/'); ?>vendor/slick-carousel/slick/slick.css">
-
-<!-- CSS Front Template -->
 <link rel="stylesheet" href="<?= base_url('assets/front/'); ?>css/theme.css">
-
-
+<script src="<?= base_url('assets/front/vendor/'); ?>jquery/dist/jquery.min.js"></script>
 
 
 <!-- Hero Section -->
@@ -116,7 +111,27 @@
            "isThumbs": true,
            "asNavFor": "#heroSlider"
          }'>
+        <div class="js-slide my-3">
+          <span class="text-white">Front Interview with a Lead Designer of the Hubble</span>
 
+          <span class="slick-pagination-line-progress">
+            <span class="slick-pagination-line-progress-helper"></span>
+          </span>
+        </div>
+        <div class="js-slide my-3">
+          <span class="text-white">Front Corporate - let's work together</span>
+
+          <span class="slick-pagination-line-progress">
+            <span class="slick-pagination-line-progress-helper"></span>
+          </span>
+        </div>
+        <div class="js-slide my-3">
+          <span class="text-white">How Google Assistant now helps you record stories</span>
+
+          <span class="slick-pagination-line-progress">
+            <span class="slick-pagination-line-progress-helper"></span>
+          </span>
+        </div>
       </div>
     </div>
   </div>
@@ -125,34 +140,11 @@
 <!-- End Hero Section -->
 
 
-
-
-
-<!-- End Go to Top -->
-
-<!-- JS Global Compulsory -->
-<script src="<?= base_url('assets/front/'); ?>vendor/jquery/dist/jquery.min.js"></script>
-<script src="<?= base_url('assets/front/'); ?>vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
 <!-- JS Implementing Plugins -->
-<script src="<?= base_url('assets/front/'); ?>vendor/hs-header/dist/hs-header.min.js"></script>
-<script src="<?= base_url('assets/front/'); ?>vendor/hs-unfold/dist/hs-unfold.min.js"></script>
 <script src="<?= base_url('assets/front/'); ?>vendor/slick-carousel/slick/slick.js"></script>
+
 <!-- JS Front -->
-<script src="<?= base_url('assets/front/'); ?>js/hs.core.js"></script>
 <script src="<?= base_url('assets/front/'); ?>js/hs.slick-carousel.js"></script>
-
-<!-- JS Plugins Init. -->
-<script>
-  $(document).on('ready', function() {
-    // initialization of slick carousel
-    $('.js-slick-carousel').each(function() {
-      var slickCarousel = $.HSCore.components.HSSlickCarousel.init($(this));
-    });
-
-
-
-  });
-</script>
 
 <!-- JS Plugins Init. -->
 <script>

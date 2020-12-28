@@ -45,8 +45,18 @@ $konfigurasi = $this->Crud_model->listingOne('tbl_konfigurasi', 'id_konfigurasi'
 
 
               <li class="navbar-nav-item">
-                <a href="<?= base_url('akun/dashboard'); ?>" class="nav-link"><i class="fa fa-home"></i> Dashboard</a>
+                <a href="<?= base_url('akun/dashboard'); ?>" class="nav-link"><strong> Dashboard</strong></a>
               </li>
+
+              <li class="navbar-nav-item">
+                <a href="<?= base_url('home/auth'); ?>" class="nav-link"><strong><i class="fa fa-sign-in-alt"></i> Login</strong></a>
+              </li>
+
+              <li class="navbar-nav-item">
+                <a href="<?= base_url('home/auth/register'); ?>" class="nav-link"><strong><i class="fa fa-user-plus"></i> Register</strong></a>
+              </li>
+
+
 
             </ul>
           </div>

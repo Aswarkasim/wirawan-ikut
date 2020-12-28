@@ -36,6 +36,19 @@ class Admin_model extends CI_Model
       ->order_by('tbl_kupon.date_created', 'DESC');
     return $this->db->get()->result();
   }
+
+  public function graph()
+  {
+    $data = $this->db->query("SELECT * from datapenduduk");
+    return $data->result();
+  }
+
+  function bulanSekarang()
+  {
+    // $query = $this->db->query("SELECT * FROM tbl_payment WHERE MONTH(date_created) = MONTH('2020-11-21 08:12:58') AND YEAR(date_created) = YEAR(CURRENT_DATE())");
+    $query = $this->db->query("SELECT * FROM tbl_payment WHERE MONTH(date_created) = '12' AND YEAR(date_created) = YEAR(CURRENT_DATE())");
+    return $query->result();
+  }
 }
 
 /* End of file ModelName.php */

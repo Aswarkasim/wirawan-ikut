@@ -3,8 +3,9 @@
 
 
       <?php
-      include('testimony.php');
+      include('hero.php');
       include('card.php');
+      include('testimony.php');
       include('team.php') ?>
 
     </main>
