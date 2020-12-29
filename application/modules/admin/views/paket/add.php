@@ -71,7 +71,16 @@
                      </div>
 
 
-
+                     <div class="form-group">
+                         <div class="row">
+                             <div class="col-md-3">
+                                 <label for="" class="pull-right">Jumlah Soal</label>
+                             </div>
+                             <div class="col-md-6">
+                                 <input type="number" name="jumlah_soal" placeholder="Jumlah Soal" value="<?= set_value('jumlah_soal') ?>" class="form-control">
+                             </div>
+                         </div>
+                     </div>
 
                      <div class="form-group">
                          <div class="row">

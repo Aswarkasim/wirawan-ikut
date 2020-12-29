@@ -65,6 +65,7 @@ class Paket extends CI_Controller
             'nama_paket'     => $i->post('nama_paket'),
             'type'     => $i->post('type'),
             'waktu'     => $i->post('waktu'),
+            'jumlah_soal'     => $i->post('jumlah_soal'),
             'klasifikasi'     => $i->post('klasifikasi'),
             'harga'     => $i->post('harga'),
             'cover'          => $config['upload_path'] . $upload_data['uploads']['file_name']

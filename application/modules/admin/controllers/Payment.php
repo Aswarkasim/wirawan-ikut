@@ -22,7 +22,7 @@ class Payment extends CI_Controller
 
     $config['base_url']     = base_url('admin/payment/index/');
     $config['total_rows']   = count($this->Crud_model->listing('tbl_payment'));
-    $config['per_page']     = 5;
+    $config['per_page']     = 20;
 
     $from = $this->uri->segment(4);
     $this->pagination->initialize($config);

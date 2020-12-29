@@ -9,9 +9,9 @@ $admin = $this->Crud_model->listingOne('tbl_admin', 'id_admin', $id_admin);
     <!-- Logo -->
     <a href="#" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>F</b>W</span>
+        <span class="logo-mini"><img src="<?= base_url('assets/img/logo.png'); ?>" alt="" width="40px"></span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>MY</b>FW</span>
+        <span class="logo-lg"><img src="<?= base_url('assets/img/logo.png'); ?>" width="100px" alt=""></span>
     </a>
 
     <!-- Header Navbar -->
@@ -23,15 +23,35 @@ $admin = $this->Crud_model->listingOne('tbl_admin', 'id_admin', $id_admin);
             <span class="sr-only">Toggle navigation</span>
         </a>
 
-        <ul class="nav navbar-nav">
-            <li class="dropdown open">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Tahun <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Sekarang</a></li>
-                    <li><a href="#">2020</a></li>
-                </ul>
-            </li>
-        </ul>
+        <?php if ($this->uri->segment('2') == 'dashboard') { ?>
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <?php
+
+                        $tahun = $this->uri->segment('4');
+                        if ($tahun == '') {
+                            $tahun = $yearNow;
+                        }
+                        echo $tahun; ?>
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+
+                        <?php
+
+                        for ($i = $yearNow; $i >= 2019; $i--) {
+
+                            if ($i == $yearNow) { ?>
+                                <li><a href="<?= base_url('admin/dashboard'); ?>">Sekarang (<?= $i; ?>)</a></li>
+                            <?php } else {  ?>
+
+                                <li><a href="<?= base_url('admin/dashboard/index/' . $i); ?>"><?= $i; ?></a></li>
+                        <?php }
+                        } ?>
+                    </ul>
+                </li>
+            </ul>
+        <?php } ?>
 
 
         <!-- Navbar Right Menu -->

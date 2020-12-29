@@ -12,9 +12,9 @@
           <?php include('ubah_thumbnail.php') ?>
 
           <ul class="list-group list-group-unbordered">
-
+            <?php include('edit.php') ?>
             <h4>
-              <strong>Nama Paket</strong>
+              <strong><?= $paket->nama_paket; ?></strong>
             </h4>
             <li class="list-group-item">
               <b>Type</b> <a class="pull-right"><?= $paket->type; ?></a>

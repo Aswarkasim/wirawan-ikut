@@ -1,6 +1,6 @@
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#UbahThumnail">
-  <i class="fa fa-camera"></i> Ubah Thumbnail
+  <i class="fa fa-camera"></i> Ubah Cover
 </button>
 
 <!-- Modal -->

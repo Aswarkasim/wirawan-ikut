@@ -60,7 +60,7 @@
                         <div class="col-md-9">
                             <select name="warna_text" class="form-control" id="">
                                 <option value="text-white">Putih</option>
-                                <option value="text-dark">Hitam</option>
+                                <option value="text-primary">Hitam</option>
                             </select>
                         </div>
                     </div>

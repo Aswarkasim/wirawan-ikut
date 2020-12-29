@@ -53,7 +53,7 @@
                             <div class="col-md-9">
                                 <select name="warna_text" class="form-control" id="">
                                     <option value="text-white" <?= $banner->warna_text == 'text-white' ? 'selected' : ''; ?>>Putih</option>
-                                    <option value="text-dark" <?= $banner->warna_text == 'text-dark' ? 'selected' : ''; ?>>Hitam</option>
+                                    <option value="text-primary" <?= $banner->warna_text == 'text-primary' ? 'selected' : ''; ?>>Hitam</option>
                                 </select>
                             </div>
                         </div>

@@ -19,11 +19,17 @@ class Cart extends CI_Controller
 
         // echo date('F');
         $mydate = "2010-05-12 13:57:01";
-        $month = date("f", strtotime($mydate));
+        $month = date("Y", strtotime($mydate));
         echo $month;
 
-        $payment = $this->AM->bulanSekarang();
-        print_r(array_slice($payment, $month));
+        $payment = $this->AM->month();
+        //print_r($payment);
+
+
+        $monthNum  = 3;
+        $dateObj   = DateTime::createFromFormat('!m', $monthNum);
+        $monthName = $dateObj->format('F'); // March
+        //   print_r($monthName);
 
         $graph = $this->AM->graph();
         $data = [
