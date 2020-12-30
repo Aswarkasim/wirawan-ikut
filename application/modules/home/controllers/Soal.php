@@ -42,7 +42,7 @@ class Soal extends CI_Controller
       ];
       $this->load->view('home/layout/wrapper', $data, FALSE);
     } else {
-      $task = $this->HM->butirSoal($id_user, $id_paket, '1');
+      $task = $this->SM->butirSoal($id_user, $id_paket, '1');
       $this->resultTask($task->id_task, $task->id_paket, $task->id_member);
     }
   }

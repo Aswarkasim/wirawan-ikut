@@ -90,76 +90,18 @@ class Paket extends CI_Controller
 
   function edit($id_paket)
   {
-    $paket = $this->Crud_model->listingOne('tbl_paket', 'id_paket', $id_paket);
-    $type = $this->Crud_model->listing('tbl_type');
 
-    $valid = $this->form_validation;
-
-    $required = '%s tidak boleh kosong';
-    $valid = $this->form_validation;
-    $valid->set_rules('nama_paket', 'Nama Paket', 'required', ['required' => $required]);
-    if ($valid->run()) {
-      if (!empty($_FILES['cover']['name'])) {
-        $config['upload_path']   = './assets/uploads/images/';
-        $config['allowed_types'] = 'gif|jpg|png|svg|jpeg';
-        $config['max_size']      = '24000'; // KB 
-        $this->upload->initialize($config);
-        if (!$this->upload->do_upload('cover')) {
-          $data = [
-            'title'    => 'Edit Paket ' . $paket->nama_paket,
-            'add'    => 'admin/paket/edit/' . $paket->id_paket,
-            'back'    => 'admin/paket',
-            'type'    => $type,
-            'paket'    => $paket,
-            'error'     => $this->upload->display_errors(),
-            'content'  => 'admin/paket/edit'
-          ];
-          $this->load->view('admin/layout/wrapper', $data, FALSE);
-        } else {
-          if ($paket->cover != '') {
-            unlink($paket->cover);
-          }
-
-          $upload_data = ['uploads' => $this->upload->data()];
-
-          $i = $this->input;
-
-          $data = [
-            'id_paket'      => $id_paket,
-            'nama_paket'     => $i->post('nama_paket'),
-            'id_type'     => $i->post('id_type'),
-            'waktu'     => $i->post('waktu'),
-            'harga'     => $i->post('harga'),
-            'cover'          => $config['upload_path'] . $upload_data['uploads']['file_name']
-          ];
-          $this->Crud_model->edit('tbl_paket', 'id_paket', $id_paket, $data);
-          $this->session->set_flashdata('msg', 'Paket diubah');
-          redirect('admin/paket/edit/' . $id_paket);
-        }
-      } else {
-        $i = $this->input;
-
-        $data = [
-          'id_paket'      => $id_paket,
-          'nama_paket'     => $i->post('nama_paket'),
-          'id_type'     => $i->post('id_type'),
-          'waktu'     => $i->post('waktu'),
-          'harga'     => $i->post('harga')
-        ];
-        $this->Crud_model->edit('tbl_paket', 'id_paket', $id_paket, $data);
-        $this->session->set_flashdata('msg', 'Paket diubah');
-        redirect('admin/paket/edit/' . $id_paket);
-      }
-    }
+    $i = $this->input;
     $data = [
-      'title'    => 'Edit Paket ' . $paket->nama_paket,
-      'edit'    => 'admin/paket/edit/' . $paket->id_paket,
-      'back'    => 'admin/paket',
-      'type'    => $type,
-      'paket'    => $paket,
-      'content'  => 'admin/paket/edit'
+      'nama_paket'  => $i->post('nama_paket'),
+      'type'        => $i->post('type'),
+      'klasifikasi' => $i->post('klasifikasi'),
+      'jumlah_soal' => $i->post('jumlah_soal'),
+      'waktu'       => $i->post('waktu')
     ];
-    $this->load->view('admin/layout/wrapper', $data, FALSE);
+    $this->Crud_model->edit('tbl_paket', 'id_paket', $id_paket, $data);
+    $this->session->set_flashdata('msg', 'Paket diubah');
+    redirect('admin/paket/detail/' . $id_paket, 'refresh');
   }
 
   function detail($id_paket)
