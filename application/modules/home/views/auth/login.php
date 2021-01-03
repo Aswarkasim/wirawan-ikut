@@ -23,7 +23,7 @@
         <label class="input-label" for="signinSrPassword">
           <span class="d-flex justify-content-between align-items-center">
             Password
-            <a class="link-underline text-capitalize font-weight-normal" href="<?= base_url('home/auth/forgot'); ?>">Lupa password?</a>
+            <!-- <a class="link-underline text-capitalize font-weight-normal" href="<?= base_url('home/auth/forgot'); ?>">Lupa password?</a> -->
           </span>
         </label>
         <input type="password" class="form-control" name="password" id="signinSrPassword" placeholder="********" aria-label="********" required="" data-msg="Your password is invalid. Please try again.">
@@ -32,9 +32,9 @@
 
       <!-- Button -->
       <div class="row align-items-center mb-5">
-        <div class="col-sm-6 mb-3 mb-sm-0">
+        <div class="col-6 mb-3">
           <span class="font-size-1 text-muted">Belum punya akun?</span>
-          <a class="font-size-1 font-weight-bold" href="<?= base_url('home/auth/register'); ?>">Register sekarang</a>
+          <a class="font-size-1 font-weight-bold" href="<?= base_url('home/auth/register'); ?>"><br> Daftar sekarang</a>
         </div>
 
         <div class="col-sm-6 text-sm-right">
